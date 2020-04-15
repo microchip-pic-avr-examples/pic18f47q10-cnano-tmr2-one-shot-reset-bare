@@ -1,30 +1,42 @@
-<div id="readme" class="Box-body readme blob js-code-block-container">
- <article class="markdown-body entry-content p-3 p-md-6" itemprop="text"><p><a href="https://www.microchip.com" rel="nofollow"><img src="images/MicrochipLogo.png" alt="MCHP" style="max-width:100%;"></a></p>
+<a href="https://www.microchip.com" rel="nofollow"><img src="images/MicrochipLogo.png" alt="MCHP" width="300"/></a>
 
 # PIC18F47Q10 Use TMR4 in One-Shot mode with external signal as reset
 
-## Objective:
-The PIC18F47Q10 features timers with One-Shot Operation.
+The PIC18F47Q10 features Three 8-bit Timers/Counters with One-Shot Operation.
 In this demo, uses TMR4 peripheral in One-Shot to stop TMR2 if an external pin is pulled to GND for more than a desired period.
 
-## Resources:
+## Related Documentation
 - Technical Brief Link [(linkTBD)](http://www.microchip.com/)
-- MPLAB® X IDE 5.30 or newer [(microchip.com/mplab/mplab-x-ide)](http://www.microchip.com/mplab/mplab-x-ide)
-- MPLAB® XC8 2.10 or newer compiler [(microchip.com/mplab/compilers)](http://www.microchip.com/mplab/compilers)
-- PIC18F47Q10 Curiosity Nano [(DM182029)](https://www.microchip.com/Developmenttools/ProductDetails/DM182029)
-- Curiosity Nano Base for Click Boards™ [(AC164162)](https://www.microchip.com/Developmenttools/ProductDetails/AC164162)
-- POT click board™ [(MIKROE-3402)](https://www.mikroe.com/pot-click)
+- [PIC18F47Q10 Product Family Page](https://www.microchip.com/design-centers/8-bit/pic-mcus/device-selection/PIC18F47Q10)
 - [PIC18F47Q10 datasheet](http://ww1.microchip.com/downloads/en/DeviceDoc/40002043D.pdf) for more information or specifications.
 
-## Hardware Configuration:
+## Software Used
 
-The PIC18F47Q10 Curiosity Nano Development Board [(DM182029)](https://www.microchip.com/Developmenttools/ProductDetails/DM182029) is used as the test platform.
+- MPLAB® X IDE 5.30 or newer [(microchip.com/mplab/mplab-x-ide)](http://www.microchip.com/mplab/mplab-x-ide)
+- MPLAB® XC8 2.10 or newer compiler [(microchip.com/mplab/compilers)](http://www.microchip.com/mplab/compilers)
 
-The following configurations must be made for this project:
-- RE0 (LED0) pin - Configured as digital output
-- RC7 pin - Configured as digital input
+## Hardware Used
+- PIC18F47Q10 Curiosity Nano [(DM182029)](https://www.microchip.com/Developmenttools/ProductDetails/DM182029)
 
-## Demo:
-Run the code, LED0 will blink with a rate of `Timer2Period` (100ms) and if the external pin RC7 is pulled down for more than `Timer4Period` (500ms), the LED0 will stop blinking. 
+## Setup
 
-<img src="images/HWsetup-One-Shot.gif" alt="Hardware Setup"/>
+- The PIC18F47Q10 Curiosity Nano Development Board [(DM182029)](https://www.microchip.com/Developmenttools/ProductDetails/DM182029) is used as the test platform.
+    <br><img src="images/HWsetup.jpg" alt="HardwareSetup" width="480"/>
+
+The following pin configurations must be made for this project:
+
+|Pin           | Configuration         |
+| :----------: | :-------------------: |
+|RE0           | Digital output (LED0) |
+|RC7           | Digital input as TMR4 trigger |
+
+## Operation
+1. Build demo firmware, make and program the generated code onto the PIC18F47Q10 Curiosity Nano.
+2. Run the code, LED0 will blink with a rate of `Timer2Period` (100ms).
+3. If the external pin RC7 is pulled to GND for more than `Timer4Period` (500ms), then LED0 will stop blinking. 
+    <br><img src="images/HWsetup-One-Shot.gif" alt="Hardware Setup"/>
+
+
+## Summary
+
+This project showcases how easy it is to use the TMR4 of PIC18F47Q10 in One-Shot mode with external signal as reset.
