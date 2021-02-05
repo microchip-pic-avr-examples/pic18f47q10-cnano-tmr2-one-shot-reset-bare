@@ -4,7 +4,7 @@
     "content": {
         "metaDataVersion": "1.1.0",
         "name": "com.microchip.mcu8.mplabx.project.pic18f47q10-cnano-tmr2-one-shot-reset-bare",
-        "version": "1.0.1",
+        "version": "1.0.2",
         "displayName": "Use TMR4 in One-Shot mode with external signal as reset",
         "projectName": "pic18f47q10-cnano-tmr2-one-shot-reset-bare",
         "shortDescription": "In this demo, uses TMR4 peripheral in One-Shot to stop TMR2 if an external pin is pulled to GND for more than a desired period.",
@@ -39,19 +39,16 @@
         "author": "Microchip",
         "subcategories": [
             [
-               "Peripherals", "TIMER", "TMR2"
+               "Peripherals",
+			   "TMR2"
             ]           			
         ],
         "peripherals": [
-            "TIMER", "TMR2"
+            "TMR2"
         ],
         "keywords": [
             "Getting Started",
 			"Timers/Counters",
-            "Timer/Counter",
-            "One Shot",
-            "Period",
-            "External Trigger",
             "Bare Metal"
         ],
 		"additionalData": {

@@ -1,4 +1,4 @@
-<a href="https://www.microchip.com" rel="nofollow"><img src="images/MicrochipLogo.png" alt="MCHP" width="300"/></a>
+[![MCHP](images/microchip.png)](https://www.microchip.com)
 
 # PIC18F47Q10 Use TMR4 in One-Shot mode with external signal as reset
 
